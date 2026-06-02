@@ -42,7 +42,8 @@ h2 {
     background: #b9b8b5;
     color: #fff;
     padding: 15px;
-    border-radius: 10px
+    border-radius: 10px;
+    text-decoration: none;
 }
 
 .navbar ul,
@@ -202,15 +203,49 @@ aside,
 }
 
 .red {
-    background: red
+    animation: red-light 3s infinite;
 }
 
 .yellow {
-    background: gold
+    animation: yellow-light 3s infinite;
+    animation-delay: 1s
 }
 
 .green {
-    background: limegreen
+    animation: green-light 3s infinite;
+    animation-delay: 2s
+}
+@keyframes red-light {
+    0%,
+    33% {
+        background: red
+    }
+    34%,
+    100% {
+        background: #555
+    }
+}
+
+@keyframes yellow-light {
+    0%,
+    33% {
+        background: gold
+    }
+    34%,
+    100% {
+        background: #555
+    }
+}
+
+@keyframes green-light {
+    0%,
+    33% {
+        background: limegreen
+    }
+    34%,
+    100% {
+        background: #555
+    }
 }
 
 .login {
