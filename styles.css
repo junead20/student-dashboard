@@ -258,12 +258,20 @@ aside,
 
 @media(max-width:768px) {
 
-    .navbar,
     .profile-card,
     .cards {
         flex-direction: column
     }
-
+    .navbar{
+        flex-direction: column;
+        gap:15px;
+        align-items: flex-start;
+    }
+    .nav-menu{
+        flex-direction: column;
+        gap: 10px;
+        width:100%;
+    }
     .gallery {
         grid-template-columns: 1fr
     }
