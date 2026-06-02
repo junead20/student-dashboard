@@ -1,166 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CSS Assignment Part 1</title>
-
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<!-- ========================= -->
-<!-- EXERCISE 1 -->
-<!-- Responsive Navigation -->
-<!-- ========================= -->
+    <header class="site-header">
+        <h1>Student Dashboard</h1>
+    </header>
 
-<section class="exercise">
+    <main>
 
-    <h1>Exercise 1 - Responsive Navigation Bar</h1>
+        <section>
+            <h2>Responsive Navigation Bar</h2>
+            <nav class="navbar">
+                <div class="logo">LOGO</div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                </ul>
+            </nav>
+        </section>
 
-    <nav class="navbar">
+        <section id="about">
+            <h2>Student Profile Card</h2>
+            <div class="profile-card">
+                <img src="data:image/jpeg;base64,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"
+                    class="profile-img">
+                <div>
+                    <h3>User</h3>
+                    <p>CSE</p>
+                    <p>user@gmail.com</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="logo">
-            STUDENT PORTAL
-        </div>
+        <section id="gallery">
+            <h2>Responsive Gallery</h2>
+            <div class="gallery"><img src="https://picsum.photos/seed/1/400/300"><img
+                    src="https://picsum.photos/seed/2/400/300"><img src="https://picsum.photos/seed/3/400/300"><img
+                    src="https://picsum.photos/seed/4/400/300"><img src="https://picsum.photos/seed/5/400/300"><img
+                    src="https://picsum.photos/seed/6/400/300"><img src="https://picsum.photos/seed/7/400/300"><img
+                    src="https://picsum.photos/seed/8/400/300"></div>
+        </section>
 
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <section id="dashboard">
+            <h2>Student Dashboard</h2>
+            <div class="dashboard">
+                <div class="cards">
+                    <div class="card">1200 Students</div>
+                    <div class="card">92% Attendance</div>
+                    <div class="card">88% Results</div>
+                </div>
+            </div>
+        </section>
 
-    </nav>
+        <section>
+            <h2>Animated Button</h2><button class="btn">Hover Me</button>
+        </section>
 
-</section>
+        <section>
+            <h2>Expanding Card</h2>
+            <div class="expand-card">Hover Me</div>
+        </section>
 
-<!-- ========================= -->
-<!-- EXERCISE 2 -->
-<!-- Student Profile Card -->
-<!-- ========================= -->
-
-<section class="exercise">
-
-    <h1>Exercise 2 - Student Profile Card</h1>
-
-    <div class="profile-card">
-
-        <div class="profile-image">
-
-            <img
-            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500"
-            alt="Student">
-
-        </div>
-
-        <div class="profile-content">
-
-            <h2>Surya</h2>
-
-            <p><strong>Roll No:</strong> 23B81A05Q2</p>
-
-            <p><strong>Branch:</strong> CSE</p>
-
-            <p><strong>Email:</strong> surya@gmail.com</p>
-
-            <button>View Profile</button>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- EXERCISE 3 -->
-<!-- Responsive Gallery -->
-<!-- ========================= -->
-
-<section class="exercise">
-
-    <h1>Exercise 3 - Responsive Gallery</h1>
-
-    <div class="gallery">
-
-        <img src="https://picsum.photos/id/1015/500/300">
-        <img src="https://picsum.photos/id/1016/500/300">
-        <img src="https://picsum.photos/id/1018/500/300">
-        <img src="https://picsum.photos/id/1025/500/300">
-
-        <img src="https://picsum.photos/id/1035/500/300">
-        <img src="https://picsum.photos/id/1040/500/300">
-        <img src="https://picsum.photos/id/1050/500/300">
-        <img src="https://picsum.photos/id/1060/500/300">
-
-    </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- EXERCISE 4 -->
-<!-- Dashboard -->
-<!-- ========================= -->
-
-<section class="exercise">
-
-    <h1>Exercise 4 - Student Dashboard</h1>
-
-    <div class="dashboard">
-
-        <aside class="sidebar">
-
-            <h2>Dashboard</h2>
-
-            <ul>
-                <li>Students</li>
-                <li>Attendance</li>
-                <li>Results</li>
-                <li>Settings</li>
+        <section>
+            <h2>Navigation Hover Effect</h2>
+            <ul class="hover-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
             </ul>
+        </section>
 
-        </aside>
+        <section>
+            <h2>Image Zoom Effect</h2>
+            <div class="zoom"><img src="https://picsum.photos/700/350"></div>
+        </section>
 
-        <main class="content">
+        <section>
+            <h2>Loading Spinner</h2>
+            <div class="spinner"></div>
+        </section>
 
-            <div class="card">
-                <h3>Total Students</h3>
-                <p>1250</p>
+        <section>
+            <h2>Moving Ball</h2>
+            <div class="track">
+                <div class="ball"></div>
             </div>
+        </section>
 
-            <div class="card">
-                <h3>Attendance</h3>
-                <p>92%</p>
+        <section>
+            <h2>Bouncing Text</h2>
+            <div class="bounce">WELCOME</div>
+        </section>
+
+        <section>
+            <h2>Traffic Signal</h2>
+            <div class="signal-box">
+                <div class="light red"></div>
+                <div class="light yellow"></div>
+                <div class="light green"></div>
             </div>
+        </section>
 
-            <div class="card">
-                <h3>Results</h3>
-                <p>85%</p>
+        <section>
+            <h2>Login Form</h2>
+            <form class="login"><input placeholder="Username"><input type="password"
+                    placeholder="Password"><button>Login</button></form>
+        </section>
+
+        <section>
+            <h2>Product Card</h2>
+            <div class="product"><img src="https://cdn.thewirecutter.com/wp-content/media/2023/07/bluetoothheadphones-2048px-0876.jpg">
+                <h3>Headphones</h3>
+                <p>₹999</p><button>Buy</button>
             </div>
+        </section>
 
-        </main>
+        <section>
+            <h2>Student Management Homepage</h2>
+            <div class="homebox">
+                <h3>Welcome to Student Management System</h3>
+                <p>Registration • Attendance • Results</p>
+            </div>
+        </section>
 
-    </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- EXERCISE 5 -->
-<!-- Animated Button -->
-<!-- ========================= -->
-
-<section class="exercise">
-
-    <h1>Exercise 5 - Animated Button</h1>
-
-    <button class="animated-btn">
-        Hover Me
-    </button>
-
-</section>
-
+    </main>
 </body>
+
 </html>
